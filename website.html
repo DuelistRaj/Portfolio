@@ -1,10 +1,12 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 </head>
+
 <body>
     <div class="site-wrap">
         <header class="site-navbar" role="banner">
@@ -41,7 +43,7 @@
                                         </li>
 
                                     </ul>
-                                </li>                                
+                                </li>
 
                                 <li>
                                     <a href="services.html">Services</a>
@@ -70,7 +72,7 @@
                             <h2 class="text-image-overlay">Apex Legends</h2>
                             <a href="single.html" class="btn-outline-white">More Renders</a>
                         </div>
-                    <img src="Images/DR - Minecraft - GOAT.jpg" alt="Image" class="img-fluid">
+                        <img src="Images/DR - Minecraft - GOAT.jpg" alt="Image" class="img-fluid">
                     </div>
                 </div>
 
@@ -80,7 +82,7 @@
                             <h2 class="text-image-overlay">Minecraft</h2>
                             <a href="single.html" class="btn-outline-white">More Renders</a>
                         </div>
-                    <img src="Images/DR - Minecraft - GOAT.jpg" alt="Image" class="img-fluid">
+                        <img src="Images/DR - Minecraft - GOAT.jpg" alt="Image" class="img-fluid">
                     </div>
                 </div>
 
@@ -90,7 +92,7 @@
                             <h2 class="text-image-overlay">Fortnite</h2>
                             <a href="single.html" class="btn-outline-white">More Renders</a>
                         </div>
-                    <img src="Images/DR - Minecraft - GOAT.jpg" alt="Image" class="img-fluid">
+                        <img src="Images/DR - Minecraft - GOAT.jpg" alt="Image" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -99,8 +101,45 @@
 
     <img src="Images/workplace.jpg" alt="Workplace" usemap="#workmap">
 
-<map name="workmap">
-  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-</map>
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+    </map>
+
+    <audio controls>
+        <source src="BadFantasy.mp3" type="audio/mp3">
+    </audio>
+
+    <video width="320" height="240" controls>
+        <source src="FAMILY1V3.mp4" type="video/mp4">
+    </video>
+
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
 </body>
+
 </html>
