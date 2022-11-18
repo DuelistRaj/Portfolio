@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="portfolio">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="CATALOG" type="xs:string"/>
+      <xs:element name="PROJECT" type="xs:string"/>
+      <xs:element name="TITLE" type="xs:string"/>
+      <xs:element name="DELIVERY_TIME" type="xs:string"/>
+      <xs:element name="REVISIONS" type="xs:string"/>
+      <xs:element name="IMAGE_SOURCING" type="xs:string"/>
+      <xs:element name="PRICE" type="xs:string"/>
+      <xs:element name="SOURCE_FILE" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

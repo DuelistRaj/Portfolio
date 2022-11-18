@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="portfolio.xsl"?>
+
+<CATALOG>
+    <PROJECT>
+        <TITLE>Apex Legends</TITLE>
+        <DELIVERY_TIME>1 Day</DELIVERY_TIME>
+        <REVISIONS>Unlimited</REVISIONS>
+        <IMAGE_SOURCING>Yes</IMAGE_SOURCING>
+        <PRICE>$30</PRICE>
+        <SOURCE_FILE>$20</SOURCE_FILE>
+    </PROJECT>
+
+    <PROJECT>
+        <TITLE>Fortnite</TITLE>
+        <DELIVERY_TIME>1 Day</DELIVERY_TIME>
+        <REVISIONS>Unlimited</REVISIONS>
+        <IMAGE_SOURCING>Yes</IMAGE_SOURCING>
+        <PRICE>$50</PRICE>
+        <SOURCE_FILE>$20</SOURCE_FILE>
+    </PROJECT>
+
+    <PROJECT>
+        <TITLE>Destiny 2</TITLE>
+        <DELIVERY_TIME>2 Day</DELIVERY_TIME>
+        <REVISIONS>Unlimited</REVISIONS>
+        <IMAGE_SOURCING>Yes</IMAGE_SOURCING>
+        <PRICE>$15</PRICE>
+        <SOURCE_FILE>$50</SOURCE_FILE>
+    </PROJECT>
+
+    <PROJECT>
+        <TITLE>Minecraft</TITLE>
+        <DELIVERY_TIME>2 Day</DELIVERY_TIME>
+        <REVISIONS>Unlimited</REVISIONS>
+        <IMAGE_SOURCING>Yes</IMAGE_SOURCING>
+        <PRICE>$25</PRICE>
+        <SOURCE_FILE>$10</SOURCE_FILE>
+    </PROJECT>
+
+    <PROJECT>
+        <TITLE>CS: GO</TITLE>
+        <DELIVERY_TIME>1 Day</DELIVERY_TIME>
+        <REVISIONS>Unlimited</REVISIONS>
+        <IMAGE_SOURCING>Yes</IMAGE_SOURCING>
+        <PRICE>$5</PRICE>
+        <SOURCE_FILE>Not Available</SOURCE_FILE>
+    </PROJECT>
+
+    <PROJECT>
+        <TITLE>Valorant</TITLE>
+        <DELIVERY_TIME>1 Day</DELIVERY_TIME>
+        <REVISIONS>Unlimited</REVISIONS>
+        <IMAGE_SOURCING>Yes</IMAGE_SOURCING>
+        <PRICE>$100</PRICE>
+        <SOURCE_FILE>$150</SOURCE_FILE>
+    </PROJECT>
+</CATALOG>
