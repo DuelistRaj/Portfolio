@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<head>
+	<title>DOM Parser</title>
+
+	<!-- CSS -->
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #17C3B2
+		}
+
+		th {
+			background-color: #227C9D;
+			color: white;
+		}
+
+		.button {
+			position: relative;
+			text-align: center;
+			padding: 20px;
+			border: 4px solid #FEF9EF;
+			background: #FFCB77;
+			color: #FE6D73;
+			outline: none;
+			border-radius: 30px;
+			font-size: 30px;
+			width: 500px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+		}
+
+		.button:hover {
+			color: black;
+			background: white;
+		}
+	</style>
+
+	<!--JavaScript-->
+	<script>
+		function loadXMLDoc() {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function () {
+
+				// Request finished and response
+				// is ready and Status is "OK"
+				if (this.readyState == 4 && this.status == 200) {
+					portfolioDetails(this);
+				}
+			};
+
+			// employee.xml is the external xml file
+			xmlhttp.open("GET", "portfolio.xml", true);
+			xmlhttp.send();
+		}
+
+		function portfolioDetails(xml) { 
+			var i;
+			var xmlDoc = xml.responseXML;
+			var table =
+				`<tr><th>TITLE</th><th>DELIVERY_TIME</th>
+					<th>REVISIONS</th><th>IMAGE_SOURCING</th>
+                    <th>PRICE</th><th>SOURCE_FILE</th>
+				</tr>`;
+			var x = xmlDoc.getElementsByTagName("PROJECT");
+
+			// Start to fetch the data by using TagName
+			for (i = 0; i < x.length; i++) {
+				index++;
+
+				table += "<tr id=row"+i+"></td><td><input type='text' value="+
+        				xmlDoc.getElementsByTagName("TITLE")[i].childNodes[0].nodeValue+
+						 "></td><td><input type='text' value="+
+						xmlDoc.getElementsByTagName("DELIVERY_TIME")[i].childNodes[0].nodeValue+
+						"></td><td><input type='text' value="+
+						xmlDoc.getElementsByTagName("REVISIONS")[i].childNodes[0].nodeValue+
+						"></td><td><input type='text' value="+
+						xmlDoc.getElementsByTagName("IMAGE_SOURCING")[i].childNodes[0].nodeValue+
+						"></td><td><input type='text' value="+
+						xmlDoc.getElementsByTagName("PRICE")[i].childNodes[0].nodeValue+
+						"></td><td><input type='text' value="+
+						xmlDoc.getElementsByTagName("SOURCE_FILE")[i].childNodes[0].nodeValue+
+						"></td><td><button type=button name=remove id="+i+
+						" class=btn btn-danger btn_remove1 onclick=remove(id)>X</button></td></tr>";
+			}
+
+            // Print the xml data in table form
+			document.getElementById("id").innerHTML = table;
+		}
+
+		var index = 0;
+
+		function add()
+		{
+			index++;
+			document.getElementById("dynamic_field").innerHTML+=
+			"<tr id=row"+index+
+			"><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><input type='text'></td><td><button type=button name=remove id="
+			+index+" class=btn btn-danger btn_remove1 onclick=remove(id)>X</button></td> </tr>";
+		}
+
+		function remove(_id)
+        {
+            document.getElementById("row"+_id).remove();
+        }
+
+	</script>
+</head>
+
+<body>
+	<center>
+		<button type="button" class="button"
+			onclick="loadXMLDoc()">
+			Get Portfolio Details
+		</button>
+	</center>
+	
+	<br><br>
+	<table>	
+		<tbody id="id"></tbody>
+		<tbody id="dynamic_field"></tbody>
+	</table>
+	<button type="button" name="add1" id="add1" class="btn btn-success" onclick="add()">Add More</button>
+</body>
+
+</html>
